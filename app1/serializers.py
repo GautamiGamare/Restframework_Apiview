@@ -8,7 +8,6 @@ class ProductSerializer(serializers.ModelSerializer):
         else:
             raise serializers.ValidationError("Quantity should be greater than 1 or equal to one")
 
-    #quantity = serializers.IntegerField(validators=validate_quantity)
     class Meta:
         fields = "__all__"
         model = ProductModel
